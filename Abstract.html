@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstract</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .Header {
+      display: flex;
+      background-color: black;
+      color: white;
+      justify-content: space-around;
+      height: 80px; /* overall header height */
+    }
+
+    .PageIcon {
+      font-size: 1.2rem;
+      padding-top: 17px;
+    }
+
+    .Buttons {
+      padding-top: 17px;
+    }
+
+    #BoldWebPageTitle {
+      font-weight: 500;
+    }
+
+    .btn.btn-primary {
+      position: relative;
+      left: 10px;
+    }
+
+    .Body {
+      display: flex;
+      flex-direction: column;
+      background-color: #afd8e6;
+      width: 100%;
+      height: 40vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input {
+      width: 300px; 
+      height: 40px; 
+      padding: 10px 40px 10px 10px;
+      font-size: 16px; 
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); 
+      border: none; 
+      border-radius: 12px; 
+    }
+
+    .Features-Grid{
+        display: grid;
+        grid-template-rows: repeat(3 , 1fr);
+        grid-template-columns: repeat(2 , 50%);
+        /* add space gaps */
+        row-gap: 50px;
+        margin: 100px;
+    }
+
+    .Feature-Grid-Item{
+        max-width: 50%; 
+        margin: 0 auto; 
+        padding: 0 15px; 
+    }
+
+    footer {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    color: white !important;
+    }
+
+  footer .text-body-secondary {
+    color: white !important;
+  }
+
+  footer .border-top {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .PaddingLeft{
+    padding-left: 100px;
+  }
+
+  .PaddingRight{
+    padding-right: 100px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  .Feature-Grid-Item img{
+    position: relative;
+    bottom: 10px;
+  }
+
+  @media only screen and (max-width: 992px) {
+  .Features-Grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 0px;
+   }
+  }
+
+  @media only screen and (max-width: 767px) {
+  .EmailBox{
+    display: none;
+  }
+}
+
+  </style>
+
+  <body>
+    <div class="Header">
+      <div class="PageIcon">
+        <img
+          src="./images/icons8-shortcuts.svg"
+          alt="PageIcon"
+          style="height: 40px"
+        />
+        <span id="BoldWebPageTitle">Abstract</span> | Help Center
+      </div>
+
+      <div class="Buttons">
+        <button type="button" class="btn btn-outline-primary">
+          Submit a request
+        </button>
+        <button type="button" class="btn btn-primary">Sign in</button>
+      </div>
+    </div>
+
+    <div class="Body">
+      <h1>How can we help?<h1>
+      <form action="/search" method="get">
+        <input type="text" placeholder="Search" class="search-box" />
+      </form>
+    </div>
+
+    <div class = "Features-Grid">
+            <div class = "Feature-Grid-Item Feature-Card-Branches">
+                <img src = "./images/icons8-branches-50.png"" alt="Branches"
+                style="height: 40px">
+                <h3>Branches</h3>
+                <p>Abstract Branches lets you manage,
+                   version, and document your designs in 
+                   one place.
+                </p>
+                <a href="#" >Learn More ⟶</a>
+            </div>
+
+            <div class = "Feature-Grid-Item Feature-Card-ManageAcc">
+                <img src = "./images/icons8-account-50.png" alt="Accounts"
+                style="height: 40px">
+                <h3>Manage your account</h3>
+                <p>Configure your account settings, such as
+                  your email, profile details, and password.
+                </p>
+                <a href="#" >Learn More ⟶</a>
+            </div>
+
+            <div class = "Feature-Grid-Item Feature-Card-ManageOrg">
+                <img src = "./images/icons8-business-24.png" alt="Business"
+                style="height: 40px">
+                <h3>Manage organizations, teams, 
+                  and projects</h3>
+
+                <p>Use Abstract organizations, teams, 
+                  and projects to organize your people 
+                  and your work.
+                </p>
+                <a href="#">Learn More ⟶</a>
+            </div>
+
+            <div class = "Feature-Grid-Item Feature-Card-Billing">
+                <img src = "./images/icons8-dollar-50.png" alt="Dollar Sign"
+                style="height: 40px">
+                <h3>Manage Billing</h3>
+                <p>Our billing section provides a seamless and secure platform for managing your invoices and payments. 
+                </p>
+                <a href="#" >Learn More ⟶</a>
+            </div>
+
+            <div class = "Feature-Grid-Item Feature-Card-Authenticate">
+                <img src = "./images/icons8-key-security-100.png" alt="Key"
+                style="height: 40px">
+                <h3>Authenicate Abstract</h3>
+                <p>Set up and configure SSO, SCIM, 
+                  and just-in-Time provisiong
+                </p>
+                <a href="#">Learn More ⟶</a>
+            </div>
+
+            <div class = "Feature-Grid-Item Feature-Card-Support">
+                <img src = "./images/icons8-support-80.png" alt="Support"
+                style="height: 40px">
+                <h3>Abstract Support</h3>
+                <p>Get In Touch with the 
+                  Support Team to help you out
+                  if you encounter any problem.
+               </p>
+                <a href="#">Learn More ⟶</a>
+            </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <footer class="py-5" style="background-color: #000;">
+          <div class="row">
+            <div class="col-6 col-md-2 mb-3 PaddingLeft">
+              <h5>Company</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Legal</a></li>
+                <br>
+                <h6>Contact Us</h6>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">yousef.nimreh@gmail.com</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-6 col-md-2 mb-3 PaddingLeft">
+              <h5>Resources</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Help Center</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Release Notes</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Status</a></li>
+              </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3 PaddingLeft">
+              <h5>Community</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">X</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Facebook</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">LinkedIn</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1 mb-3 PaddingRight EmailBox">
+              <form>
+                <h5>Subscribe to our newsletter</h5>
+                <p>Monthly digest of what's new and exciting from us.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top PaddingLeft">
+            <p><img
+              src="./images/icons8-shortcuts.svg"
+              alt="PageIcon"
+              style="height: 30px"
+            /><br><br>© 2024 Abstract Studio Design, Inc.<br> All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+
+  </body>
+</html>
